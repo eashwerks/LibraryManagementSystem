@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .bg-primary{
+        background-color: #ffb656;
+      }
+      .logout-btn{
+        float: right;
+      }
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+      }
+
+      tr:nth-child(even) {
+          background-color: #dddddd;
+      }
+      .btn-search{
+        float: left;
+      }
+    </style>
+  </head>
+  <body class="bg-primary">
+    <div class="head">
+      <button class="logout-btn" type="button" name="btn-logout">Logout</button>
+      <h3>Library Management System</h3>
+      <h2>Library Admin</h2>
+    </div>
+    <div class="select">
+      <div>
+        <p class="select">Select from List:</p>
+        <select name="cars" class="select">
+          <option value="Users">Users</option>
+          <option value="Books">Books</option>
+        </select>
+      </div>
+      <input class="btn-search" type="text" placeholder="Search user" style="position:">
+      <button class="btn-search" type="button" name="Search">Search</button>
+    </div>
+    <div class="table">
+      <table>
+        <tr>
+          <th>User</th>
+          <th>Contact Number</th>
+          <th>Reg. Number</th>
+        </tr>
+        <tr>
+          <td>Amruthesh K S</td>
+          <td>7034413731</td>
+          <td>012018</td>
+        </tr>
+        <tr>
+          <td>Hariprasad V J</td>
+          <td>8078029914</td>
+          <td>022018</td>
+        </tr>
+        <tr>
+          <td>Misha Muraly</td>
+          <td>8589025753l</td>
+          <td>032018</td>
+        </tr>
+        <tr>
+          <td>Raijo Antony</td>
+          <td>8089961235</td>
+          <td>042018</td>
+        </tr>
+        <tr>
+          <td>Tinto Davis</td>
+          <td>7356424107</td>
+          <td>052018</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
