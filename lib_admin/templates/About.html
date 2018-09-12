@@ -10,7 +10,8 @@
     <title>About</title>
     <style media="screen">
      body{
-      background-image: url("img_about.jpg"); /* The image used */
+      {% load static %}
+      background-image: url("{% static "img_about.jpg" %}"); /* The image used */
       background-color:white; /* Used if the image is unavailable */
       height: 450px; /* You must set a specified height */
       background-position: center; /* Center the image */
