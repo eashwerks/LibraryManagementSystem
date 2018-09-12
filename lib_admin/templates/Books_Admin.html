@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>AdminBookz</title>
+    <style media="screen">
+    body{
+     background-image: url("img_admin.jpg"); /* The image used */
+     background-color:white; /* Used if the image is unavailable */
+     height: 600px; /* You must set a specified height */
+     background-position: center; /* Center the image */
+     background-repeat: no-repeat; /* Do not repeat the image */
+     background-size: cover; /* Resize the background image to cover the entire container */
+     }
+     .navbar-light{
+       background-color: rgba(0, 0, 0, 0.8);
+       color:white;
+     }
+     .nav-link{
+       color: white;
+     }
+     .grp{
+       margin-left: 450px;
+       margin-right: 350px;
+       margin-top: 55px;
+     }
+     .rectangle {
+        position: relative;
+        height: 520px;
+        width: 1100px;
+        margin-top:10px;
+        margin-left: 130px;
+        background-color:rgba(0, 0, 0, 0.6);
+      }
+      .tab{
+        color:black;
+      }
+      .over{
+        height:510px;
+        overflow-y: scroll;
+      }
+      .modal-dialog{
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="navbar-brand nav-link" href="Lms_AdminPage.html"><span class="glyphicon glyphicon-backward"><font size="5">-Back</font></span></a>
+    <div class="input-group grp">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+      <input type="text" id="search" placeholder="Search Here Using Book Name" class="form-control">
+    </div>
+    <div class="rectangle over">
+      <div>
+        <table class="table table-hover tab">
+          <thead>
+            <tr>
+              <th>ISDN</th>
+              <th>Book Name</th>
+              <th>Author</th>
+              <th>Publisher</th>
+              <th>Availability</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ISDN001</td>
+              <td>Harry Potter</td>
+              <td>J K Rowling</td>
+              <td>UnKnown Publication</td>
+              <td>Available</td>
+            </tr>
+            <tr>
+              <td>ISDN002</td>
+              <td>The Alchemist</td>
+              <td>Paulo Coelho</td>
+              <td>UnKnown Publication</td>
+              <td>Available</td>
+            </tr>
+            <tr>
+              <td>ISDN003</td>
+              <td>War and Peace</td>
+              <td>Leo Tolstoy</td>
+              <td>UnKnown Publication</td>
+              <td>Available</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-light navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle navbar-light" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <h4><span class="glyphicon glyphicon-book"></span> BookDetails</h4>
+        </div>
+        <div class="collapse navbar-collapse nav-link" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a data-toggle="modal" data-target="#myModalAdd" href="#myModalAdd" class="nav-link" ><span class="glyphicon glyphicon-plus-sign"></span> Add</a></li>
+            <li><a class="nav-link" data-toggle="modal" data-target="#myModalRemove" href="#myModalRemove"><span class="glyphicon glyphicon-minus-sign"></span> Remove</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </body>
+  <!-- Modal Add-->
+  <div class="modal fade" id="myModalAdd" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title" ><span class="glyphicon glyphicon-plus-sign"></span> Add</h3>
+        </div>
+        <div class="modal-body">
+          <div>
+              <form class="form-container">
+                  <div class="form-group">
+                      <label for="id" style="color: rgb(65, 188, 225)">ISDN</label>
+                      <div>
+                          <input type="text" id="bid" class="form-control">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="name" style="color: rgb(65, 188, 225)">Book Name</label>
+                      <div>
+                          <input type="text" id="bname" class="form-control">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="Author" style="color: rgb(65, 188, 225)">Author</label>
+                      <div>
+                          <input type="text" id="author" class="form-control">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="publisher" style="color: rgb(65, 188, 225)">Publisher</label>
+                      <div>
+                          <input type="text" id="publ" class="form-control">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="availability" style="color: rgb(65, 188, 225)">Availability</label>
+                      <div>
+                        <table>
+                          <tr>
+                            <td style="padding:5px; color: rgb(65, 188, 225);"><input type="radio" id="avail" class="form-control"> Available</input></td>
+                            <td style="padding:5px; color: rgb(65, 188, 225);"><input type="radio" id="unavail" class="form-control"> Unavailable</input></td>
+                          </tr>
+                        </table>
+                      </div>
+                  </div>
+              </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="form-group">
+                  <button type="submit" class="btn btn-default" style="background-color: rgb(65, 188, 225); color: white; padding-left:20px;margin-left: 37% ">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Remove-->
+  <div class="modal fade" id="myModalRemove" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title" ><span class="glyphicon glyphicon-minus-sign"></span> Remove</h3>
+        </div>
+        <div class="modal-body">
+          <div>
+            <form class="form-container">
+                <div class="form-group">
+                    <label for="id" style="color: rgb(65, 188, 225)">ISDN</label>
+                    <div>
+                        <input type="text" id="bid" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <div class="form-group">
+                      <button type="submit" class="btn btn-default" style="background-color: rgb(65, 188, 225); color: white; padding-left:20px;margin-left: 37% ">Remove</button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>

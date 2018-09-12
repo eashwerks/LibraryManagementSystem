@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>User</title>
+    <style media="screen">
+    body{
+     background-image: url("img_user.jpg"); /* The image used */
+     background-color:white; /* Used if the image is unavailable */
+     height: 600px; /* You must set a specified height */
+     background-position: center; /* Center the image */
+     background-repeat: no-repeat; /* Do not repeat the image */
+     background-size: cover;; /* Resize the background image to cover the entire container */
+     }
+     .navbar-light{
+       background-color: rgba(0, 0, 0, 0.8);
+       color:white;
+     }
+     .nav-link{
+       color: white;
+     }
+     .rectangle {
+        position: relative;
+        height: 520px;
+        width: 1100px;
+        margin-top:75px;
+        margin-left: 130px;
+        background-color:rgba(0, 0, 0, 0.5);
+      }
+      .tab{
+        color:black;
+      }
+      .t{
+        padding: 10px;
+        color: rgb(0, 0, 0);
+      }
+
+
+        .card {
+      padding-top: 20px;
+      margin: 10px 0 20px 0;
+      background-color: rgba(214, 224, 226, 0.2);
+      border-top-width: 0;
+      border-bottom-width: 2px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      }
+
+      .card .card-heading {
+          padding: 0 20px;
+          margin: 0;
+      }
+
+      .card .card-heading.simple {
+          font-size: 20px;
+          font-weight: 300;
+          color: #777;
+          border-bottom: 1px solid #e5e5e5;
+      }
+
+      .card .card-heading.image img {
+          display: inline-block;
+          width: 46px;
+          height: 46px;
+          margin-right: 15px;
+          vertical-align: top;
+          border: 0;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+      }
+
+      .card .card-heading.image .card-heading-header {
+          display: inline-block;
+          vertical-align: top;
+      }
+
+      .card .card-heading.image .card-heading-header h3 {
+          margin: 0;
+          font-size: 14px;
+          line-height: 16px;
+          color: #262626;
+      }
+
+      .card .card-heading.image .card-heading-header span {
+          font-size: 12px;
+          color: #999999;
+      }
+
+      .card .card-body {
+          padding: 0 20px;
+          margin-top: 20px;
+      }
+
+      .card .card-media {
+          padding: 0 20px;
+          margin: 0 -14px;
+      }
+
+      .card .card-media img {
+          max-width: 100%;
+          max-height: 100%;
+      }
+
+      .card .card-actions {
+          min-height: 30px;
+          padding: 0 20px 20px 20px;
+          margin: 20px 0 0 0;
+      }
+
+      .card .card-comments {
+          padding: 20px;
+          margin: 0;
+          background-color: #f8f8f8;
+      }
+
+      .card .card-comments .comments-collapse-toggle {
+          padding: 0;
+          margin: 0 20px 12px 20px;
+      }
+
+      .card .card-comments .comments-collapse-toggle a,
+      .card .card-comments .comments-collapse-toggle span {
+          padding-right: 5px;
+          overflow: hidden;
+          font-size: 12px;
+          color: #999;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+      }
+
+      .card-comments .media-heading {
+          font-size: 13px;
+          font-weight: bold;
+      }
+
+      .card.people {
+          position: relative;
+          display: inline-block;
+          width: 170px;
+          height: 300px;
+          padding-top: 0;
+          margin-left: 20px;
+          overflow: hidden;
+          vertical-align: top;
+      }
+
+      .card.people:first-child {
+          margin-left: 0;
+      }
+
+      .card.people .card-top {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: inline-block;
+          width: 170px;
+          height: 150px;
+          background-color: #ffffff;
+      }
+
+      .card.people .card-top.green {
+          background-color: #53a93f;
+      }
+
+      .card.people .card-top.blue {
+          background-color: #427fed;
+      }
+
+      .card.people .card-info {
+          position: absolute;
+          top: 150px;
+          display: inline-block;
+          width: 100%;
+          height: 101px;
+          overflow: hidden;
+          background: #ffffff;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+      }
+
+      .card.people .card-info .title {
+          display: block;
+          margin: 8px 14px 0 14px;
+          overflow: hidden;
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 18px;
+          color: #404040;
+      }
+
+      .card.people .card-info .desc {
+          display: block;
+          margin: 8px 14px 0 14px;
+          overflow: hidden;
+          font-size: 12px;
+          line-height: 16px;
+          color: #737373;
+          text-overflow: ellipsis;
+      }
+
+      .card.people .card-bottom {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          display: inline-block;
+          width: 100%;
+          padding: 10px 20px;
+          line-height: 29px;
+          text-align: center;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+      }
+
+      .card.hovercard {
+          position: relative;
+          padding-top: 0;
+          overflow: hidden;
+          text-align: center;
+          background-color: rgba(214, 224, 226, 0.2);
+      }
+
+      .card.hovercard .cardheader {
+          background: url("http://lorempixel.com/850/280/nature/4/");
+          background-size: cover;
+          height: 135px;
+      }
+
+      .card.hovercard .avatar {
+          position: relative;
+          top: -50px;
+          margin-bottom: -50px;
+      }
+      .card.hovercard .avatar img {
+      width: 100px;
+      height: 100px;
+      max-width: 100px;
+      max-height: 100px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      border: 5px solid rgba(255,255,255,0.5);
+      }
+
+      .card.hovercard .info {
+          padding: 4px 8px 10px;
+      }
+
+      .card.hovercard .info .title {
+          margin-bottom: 4px;
+          font-size: 24px;
+          line-height: 1;
+          color: #262626;
+          vertical-align: middle;
+      }
+
+      .card.hovercard .info .desc {
+          overflow: hidden;
+          font-size: 12px;
+          line-height: 20px;
+          color: #737373;
+          text-overflow: ellipsis;
+      }
+
+      .card.hovercard .bottom {
+          padding: 0 20px;
+          margin-bottom: 17px;
+      }
+
+      /* .btn{ border-radius: 50%; width:32px; height:32px; line-height:18px;  } */
+      .avatar{
+        size:30%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-light navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle navbar-light" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <h4><span class="glyphicon glyphicon-user"></span> User</h4>
+        </div>
+        <div class="collapse navbar-collapse nav-link" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a class="nav-link" data-toggle="modal" data-target="#myModalProfile" href="#myModalProfile"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+            <li><a class="nav-link" href="Books_User.html"><span class="glyphicon glyphicon-book"></span> Books</a></li>
+            <li><a class="nav-link" href="Lms_HomePage.html"><span class="glyphicon glyphicon-log-out"></span> LogOut</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="rectangle">
+      <div>
+        <table>
+          <tr>
+            <td class="t"><h4> Book Details That You Took:</h4></td>
+          </tr>
+          <tr>
+            <table class="table table-hover tab">
+              <thead>
+                <th>ISDN</th>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Return Date</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>a</td>
+                  <td>b</td>
+                  <td>c</td>
+                  <td>d</td>
+                </tr>
+                <tr>
+                  <td>a</td>
+                  <td>b</td>
+                  <td>c</td>
+                  <td>d</td>
+                </tr>
+              </tbody>
+            </table>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td class="t"><h4> Fine:</h4></td>
+            <td><input type="text" id="fine"></td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td style="padding:100px;"><a href="Books_User.html" class="btn btn-primary" role="button">Bring Book</a></td>
+            <td><a data-toggle="modal" data-target="#myModalReturn" href="#myModalReturn" class="btn btn-warning" role="button">Return Book</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+  <!-- Modal Return-->
+  <div class="modal fade" id="myModalReturn" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title" ><span class="glyphicon glyphicon-minus-sign"></span> Return</h3>
+        </div>
+        <div class="modal-body">
+          <div>
+            <form class="form-container">
+                <div class="form-group">
+                    <label for="id" style="color: rgb(65, 188, 225)">ISDN</label>
+                    <div>
+                        <input type="text" id="bid" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <div class="form-group">
+                      <button type="submit" class="btn btn-default" style="background-color: rgb(65, 188, 225); color: white; padding-left:20px;margin-left: 37% ">Return</button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Profile-->
+  <div class="modal fade" id="myModalProfile" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h1 class="modal-title" style="text-align:center"><span class="glyphicon glyphicon-user"></span> User Profile</h1>
+        </div>
+        <div style="margin-left:1.5cm;" class="modal-body">
+          <div class="row">
+            <div class="col-lg-10 col-sm-12">
+              <div class="card hovercard">
+                <div class="cardheader">
+                </div>
+                <div class="avatar">
+                    <img alt="glyphicon glyphicon-user" src="D:\Cha eun woo\cha.jpg">
+                </div>
+                <div class="info">
+                    <div class="title">
+                        <a target="_blank" href="https://chaeunwoo.com/">Cha Eun Woo</a>
+                    </div>
+                    <div class="desc">Passionate Actor</div>
+                    <div class="desc">Singer</div>
+                    <div class="desc">K-Drama</div>
+                </div>
+                <div class="bottom">
+                    <a class="btn btn-primary btn-twitter btn-sm" href="#">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-danger btn-sm" rel="publisher"
+                       href="#">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm" rel="publisher"
+                       href="#">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class="btn btn-warning btn-sm" rel="publisher" href="#">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>
