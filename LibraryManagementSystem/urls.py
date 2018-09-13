@@ -19,5 +19,5 @@ import lib_admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', include('lib_admin.urls')),
+    url(r'', include('lib_admin.urls')),
 ]
